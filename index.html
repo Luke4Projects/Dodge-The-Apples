@@ -1,0 +1,107 @@
+<h1 id="mainText">Dodge The Apples</h1>
+
+<button id="playButton" onclick="play()">Play</button>
+<button id="backButton" onclick="location.href='https://luke4projects.github.io/'">Back To Main Website</button>
+
+<h1 id="deathText">You Died</h1>
+
+<button id="backToMenuButton" onclick="refresh()">Back To Main Menu</button>
+
+<h1 id="score">Score: 0</h1>
+
+<canvas id="canv" width=800 height=800></canvas>
+
+<script src="main.js"></script>
+
+<style>
+
+    #score {
+        color: black;
+        font-family: "Comic Sans MS";
+        position: absolute;
+        top: -10px;
+        left: 610px;
+        font-size: 40px;
+    }
+    #mainText {
+       position: absolute;
+       left: 181px;
+       font-family: "Comic Sans MS";
+       color: lightyellow; 
+       font-size: 50px;
+       width: 438;
+    }
+    #playButton {
+        position: absolute;
+        left: 225px;
+        top: 200px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        width: 350px;
+        height: 60px;
+        background-color: lightgreen;
+        border: none;
+        font-size: 40px;
+        transition-duration: 0.4s;
+    }
+    #playButton:hover {
+        width: 360px;
+        height: 70px;
+        left: 220px;
+        top: 195px;
+        font-size: 45px;
+        background-color: lightblue;
+    }
+    #backButton {
+        position: absolute;
+        left: 225px;
+        top: 350px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        width: 350px;
+        height: 60px;
+        background-color: lightgreen;
+        border: none;
+        font-size: 35px;
+        transition-duration: 0.4s;
+    }
+    #backButton:hover {
+        width: 360px;
+        height: 70px;
+        left: 220px;
+        top: 345px;
+        font-size: 37px;
+        background-color: lightblue;
+    }
+    #deathText {
+       position: absolute;
+       left: 293px;
+       font-family: "Comic Sans MS";
+       color: red; 
+       font-size: 50px;
+       width: 214;
+       display: none;
+       -webkit-text-stroke-width: 1px;
+       -webkit-text-stroke-color: black;
+    }
+    #backToMenuButton {
+        position: absolute;
+        left: 225px;
+        top: 200px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        width: 350px;
+        height: 60px;
+        background-color: lightgreen;
+        border: none;
+        font-size: 35px;
+        transition-duration: 0.4s;
+        display: none;
+    }
+    #backToMenuButton:hover {
+        width: 360px;
+        height: 70px;
+        background-color: lightblue;
+        font-size: 37;
+        left: 220px;
+        top: 195px;
+    }
+
+</style>
