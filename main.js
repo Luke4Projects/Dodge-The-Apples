@@ -24,9 +24,9 @@ class Player {
         c.fillRect(this.x, this.y, this.w, this.h);
         //left eye
         c.fillStyle = 'black'
-        c.fillRect(this.x + 5, this.y + 7, 5, 15)
+        c.fillRect(this.x + 5, this.y + 7, 5, 10)
         //right eye
-        c.fillRect(this.x + this.w - 10, this.y + 7, 5, 15);
+        c.fillRect(this.x + this.w - 10, this.y + 7, 5, 10);
         //mouth
         c.fillRect(this.x + 5, this.y + 35, this.w - 10, 5);
         c.fillRect(this.x, this.y + 30, 5, 5);
@@ -62,6 +62,21 @@ class Apple {
         this.touched = false;
 
         this.visible = true;
+
+        this.pickXspeed = Math.floor(Math.random() * 15);
+
+        this.xSpeed;
+
+        if (this.pickXspeed === 0) {
+            if (p.x > this.x) {
+                this.xSpeed = 5;
+            }
+            if (p.x < this.x) {
+                this.xSpeed = -5;
+            }
+        } else {
+            this.xSpeed = 0;
+        }
     }
     show() {
         if (this.visible) {
@@ -76,6 +91,7 @@ class Apple {
         }
     }
     update() {
+        this.x += this.xSpeed;
         this.y += this.ySpeed;
         this.ySpeed += this.gravity;
         //collision detection
